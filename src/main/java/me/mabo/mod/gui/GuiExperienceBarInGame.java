@@ -54,27 +54,12 @@ public class GuiExperienceBarInGame extends Gui {
             //Get current xp by multiplying the next XP amount with the experience (double)
             double currentXP = xpMax * mc.player.experience;
 
-            //GL11.glPushMatrix(); //Starts the GL11 drawing (like rescaling)
-            // GL11.glScalef(0.8F, 0.8F, 1F); //Scales the GUI/HUD
-            //drawString(FMLClientHandler.instance().getClient().fontRenderer, /**mc.player.getName()**/ "MMMMMMMMMMMMMMMM", 5, 2, 0xffffff); //Player name
-            //GL11.glPopMatrix(); //Reverts the changes that has been made
-
             //Draw XP strings (info)
             //drawString(FMLClientHandler.instance().getClient().fontRenderer, Integer.toString(mc.player.experienceLevel), 5, 12, 0xffffff); //Current XP LEVEL
             drawString(FMLClientHandler.instance().getClient().fontRenderer, Integer.toString((int) currentXP) + " / " + Integer.toString(xpMax), 68, 23, 0xffffff); //XP bar text
             drawString(FMLClientHandler.instance().getClient().fontRenderer, Integer.toString((int) mc.player.getHealth()) + " / " + Integer.toString((int) mc.player.getMaxHealth()), 68, 9, 0xffffff); //HP bar text
 
             //drawString(FMLClientHandler.instance().getClient().fontRenderer, String.valueOf(mc.player.getTotalArmorValue()), 200, 200, 0xffffff); //Draw armor level
-
-            mc.player.getTotalArmorValue();
-
-            if (Main.DEV_MODE) {
-                drawCenteredString(mc.fontRenderer, "Experience Bar | DEV EDITION | 1.0.0", mc.displayWidth / 4, 2, 0xffffff); // TEST VERSION TEXT
-                drawString(mc.fontRenderer, "FPS: " + Minecraft.getDebugFPS(), 1000, 2, 0xffffff);
-                drawString(mc.fontRenderer, "X: " + mc.player.posX, 1000, 10, 0xffffff);
-                drawString(mc.fontRenderer, "Y: " + mc.player.posY, 1000, 18, 0xffffff);
-                drawString(mc.fontRenderer, "Z: " + mc.player.posZ, 1000, 26, 0xffffff);
-            }
         }
     }
 }

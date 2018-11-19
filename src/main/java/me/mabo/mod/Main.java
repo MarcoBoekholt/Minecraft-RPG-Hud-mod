@@ -22,8 +22,6 @@ public class Main {
     @Mod.Instance
     public static Main instance;
 
-    public static boolean DEV_MODE = true;
-
     public static final Logger logger = LogManager.getLogger(Reference.MODID);
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
