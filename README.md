@@ -1,1 +1,2 @@
-Minecraft RPG Hud mod
+Minecraft RPG Hud mod (Practice mod)
+
